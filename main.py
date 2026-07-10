@@ -26,12 +26,14 @@ print("Lives left:", lives)
 
 while lives > 0:
     guess = input("Guess a letter: ").upper()
-    if guess in guessed_letters:
-        print("You've already guessed this")
-        continue #skip loop 
-    if len(guess)!= 1:
+
+#check for letters
+if len(guess)!= 1:
         print("Invalid input. Please enter one letter.")
         continue
+        print("You've already guessed this. '{guessed}' Try a different letter.")
+        continue 
+    
 
 # add validity 
 guessed_letters.append(guess)
