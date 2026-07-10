@@ -11,7 +11,7 @@ guessed_letters = []
 lives = 6
 
 # this should show the display of the word
-def show_word():
+def display_word():
     display = ""
     for letter in answer:
         if letter in guessed_letters:
@@ -20,5 +20,8 @@ def show_word():
             display += "_ "
     return display
 
-print(show_word())
+print(display_word())
+
 print("Lives left:", lives)
+
+guess = input("Guess a letter: ")
