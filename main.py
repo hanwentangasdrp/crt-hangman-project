@@ -25,6 +25,6 @@ print(display_word())
 print("Lives left:", lives)
 
 while lives > 0:
-    guess = input("Guess a letter: ")
+    guess = input("Guess a letter: ").upper()
     if len(guess)!= 1 and guess != answer:
         print("invalid answer")
