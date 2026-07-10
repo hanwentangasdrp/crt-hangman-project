@@ -26,5 +26,7 @@ print("Lives left:", lives)
 
 while lives > 0:
     guess = input("Guess a letter: ").upper()
-    if len(guess)!= 1 and guess != answer:
-        print("invalid answer")
+    if guess in guessed_letters:
+        print("You've already guessed this")
+    if len(guess)!= 1:
+        print("Invalid input. Please enter one letter.")
