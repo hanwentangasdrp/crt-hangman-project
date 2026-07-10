@@ -2,9 +2,9 @@ import random
 
 print("Let's play Hangman!")
 
-words = ["python", "apple", "computer", "banana"]
+word_bank = ["python", "apple", "computer", "banana"]
 
-answer = random.choice(words)
+answer = random.choice(word_bank)
 
 guessed_letters = []
 
@@ -24,4 +24,7 @@ print(display_word())
 
 print("Lives left:", lives)
 
-guess = input("Guess a letter: ")
+while lives > 0:
+    guess = input("Guess a letter: ")
+    if len(guess)!= 1 and guess != answer:
+        print("invalid answer")
