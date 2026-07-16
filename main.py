@@ -37,3 +37,17 @@ if len(guess)!= 1:
 
 # add validity 
 guessed_letters.append(guess)
+if guess in answer:
+        print("Correct!")
+    else:
+        print("Letter not found!")
+        lives -= 1
+
+    if "_" not in display_word():
+        print(display_word())
+        print("You won!")
+        break
+
+if lives == 0:
+    print("Out of lives, game over!")
+    print("The word was:", answer)
