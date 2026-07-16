@@ -20,24 +20,26 @@ def display_word():
             display += "_ "
     return display
 
-print(display_word())
-
-print("Lives left:", lives)
-
 while lives > 0:
-    guess = input("Guess a letter: ").upper()
 
-#check for letters
-if len(guess)!= 1:
+    print(display_word())
+    print("Lives left:", lives)
+
+    guess = input("Guess a letter: ").lower()
+
+    #check for letters
+    if len(guess) != 1 or not guess.isalpha():
         print("Invalid input. Please enter one letter.")
         continue
-        print("You've already guessed this. '{guessed}' Try a different letter.")
-        continue 
-    
 
-# add validity 
-guessed_letters.append(guess)
-if guess in answer:
+    if guess in guessed_letters:
+        print("You've already guessed this. Try a different letter.")
+        continue
+
+    # add validity
+    guessed_letters.append(guess)
+
+    if guess in answer:
         print("Correct!")
     else:
         print("Letter not found!")
