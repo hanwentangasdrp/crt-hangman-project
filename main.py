@@ -12,7 +12,7 @@ guessed_letters = []
 
 lives = 6
 
-# this should show the display of the word
+
 def display_word():
     display = ""
     for letter in answer:
@@ -29,7 +29,7 @@ while lives > 0:
 
     guess = input("Guess a letter: ").lower()
 
-    #check for letters
+
     if len(guess) != 1 or not guess.isalpha():
         print("Invalid input. Please enter one letter.")
         continue
@@ -38,7 +38,7 @@ while lives > 0:
         print("You've already guessed this. Try a different letter.")
         continue
 
-    # add validity
+
     guessed_letters.append(guess)
 
     if guess in answer:
