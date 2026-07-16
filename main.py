@@ -1,3 +1,5 @@
+# Project Members: Hanwen Tang, Veer Sharma, Megan Shaw, Aidan Cheng
+
 import random
 
 print("Let's play Hangman!")
